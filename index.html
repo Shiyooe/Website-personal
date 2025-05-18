@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Profil Akrom</title>
+  <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0; padding: 0; box-sizing: border-box;
+    }
+    body {
+      font-family: 'Zen Kaku Gothic New', sans-serif;
+      background: linear-gradient(135deg, #1e1e2f, #2a2a5a);
+      color: #f0f0f0;
+      animation: fadeInBody 1s ease;
+    }
+    @keyframes fadeInBody {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 20px;
+      background: rgba(255, 105, 180, 0.05);
+      animation: fadeInNav 1s ease forwards;
+      right: 20px;
+
+    }
+    @keyframes fadeInNav {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    nav a {
+      color: #ff69b4;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s ease;
+    }
+    nav a:hover {
+      color: #fff;
+      text-shadow: 0 0 10px #ff69b4;
+      transform: scale(1.05);
+    }
+    header {
+      text-align: center;
+      padding: 40px 20px 20px;
+      animation: fadeInHeader 1.3s ease forwards;
+    }
+    @keyframes fadeInHeader {
+      from { opacity: 0; transform: scale(0.95); }
+      to { opacity: 1; transform: scale(1); }
+    }
+    .profile-akrom {
+      background: linear-gradient(45deg, rgba(255,105,180,0.3), rgba(138,43,226,0.3));
+      border: 2px solid #ff69b4;
+      border-radius: 20px;
+      padding: 25px;
+      display: inline-block;
+      box-shadow: 0 0 15px #ff69b480;
+      transition: 0.3s ease;
+    }
+    .profile-akrom:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 20px #ff69b4aa;
+    }
+    .profile-pic {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      border: 4px solid #ff69b4;
+      object-fit: cover;
+      margin-bottom: 15px;
+      animation: fadeInProfile 1.5s ease;
+    }
+    @keyframes fadeInProfile {
+      from { opacity: 0; transform: scale(0.8); }
+      to { opacity: 1; transform: scale(1); }
+    }
+    .name {
+      font-size: 28px;
+      color: #ff69b4;
+      margin-bottom: 10px;
+    }
+    .desc {
+      max-width: 600px;
+      font-size: 15px;
+      line-height: 1.7;
+      margin: 0 auto;
+      opacity: 0;
+      animation: fadeInDesc 2s ease forwards;
+      animation-delay: 1s;
+    }
+    @keyframes fadeInDesc {
+      to { opacity: 1; }
+    }
+    section.skills {
+      max-width: 600px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+    .skill {
+      margin-bottom: 20px;
+      opacity: 0;
+      animation: fadeInSkill 1s ease forwards;
+    }
+    .skill:nth-child(2) { animation-delay: 0.2s; }
+    .skill:nth-child(3) { animation-delay: 0.4s; }
+    .skill:nth-child(4) { animation-delay: 0.6s; }
+
+    @keyframes fadeInSkill {
+      to { opacity: 1; }
+    }
+    .skill-title {
+      font-weight: bold;
+      margin-bottom: 5px;
+      color: #ff69b4;
+    }
+    .skill-bar {
+      height: 16px;
+      background: #333;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    .skill-bar-fill {
+      height: 100%;
+      background: linear-gradient(to right, #ff69b4, #8a2be2);
+      width: var(--width);
+      border-radius: 8px;
+      transition: width 1.5s ease;
+    }
+    .komen {
+      max-width: 600px;
+      margin: 50px auto;
+      padding: 20px;
+      border-radius: 15px;
+      background: rgba(255, 105, 180, 0.1);
+      animation: fadeInContact 1s ease forwards;
+    }
+    @keyframes fadeInContact {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .komen h2 {
+      text-align: center;
+      color: #ff69b4;
+      margin-bottom: 15px;
+    }
+    .kelaz {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .kelaz input, .kelaz textarea {
+      padding: 10px;
+      border: none;
+      border-radius: 8px;
+      background: #2a2a5a;
+      color: #fff;
+      transition: 0.3s ease;
+    }
+    .kelaz input:focus, .kelaz textarea:focus {
+      outline: none;
+      box-shadow: 0 0 10px #ff69b4aa;
+    }
+    .kelaz button {
+      padding: 10px;
+      border: none;
+      border-radius: 8px;
+      background: #ff69b4;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    .kelaz button:hover {
+      background: #ff85c1;
+    }
+    .info {
+      margin-top: 20px;
+      text-align: center;
+      font-size: 14px;
+    }
+    footer {
+      text-align: center;
+      padding: 15px;
+      font-size: 13px;
+      color: #ccc;
+      margin-top: 40px;
+      animation: fadeInFooter 1s ease forwards;
+    }
+    @keyframes fadeInFooter {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="buku tamu.html">Buku Tamu</a>
+    <a href="galery.html">Galeri</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <header>
+    <div class="profile-akrom">
+      <img src="istri saya.jpg" alt="Foto Akrom" class="profile-pic">
+      <div class="name">Muhammad Yusuf Akrom</div>
+      <div class="desc">
+        Aku adalah pelajar dan calon AI Engineer. Dari kecil, aku ingin menjelajah luar angkasa. Hobiku: coding, menulis, bersepeda, dan belajar setiap hari.
+      </div>
+    </div>
+  </header>
+
+  <section class="skills">
+    <h2>Skill Coding:</h2>
+    <div class="skill">
+      <div class="skill-title">HTML/CSS</div>
+      <div class="skill-bar"><div class="skill-bar-fill" style="--width: 40%;"></div></div>
+    </div>
+    <div class="skill">
+      <div class="skill-title">Python</div>
+      <div class="skill-bar"><div class="skill-bar-fill" style="--width: 45%;"></div></div>
+    </div>
+    <div class="skill">
+      <div class="skill-title">SQL</div>
+      <div class="skill-bar"><div class="skill-bar-fill" style="--width: 30%;"></div></div>
+    </div>
+  </section>
+
+  <section class="komen">
+    <h2>Kontak Saya</h2>
+    <form class="kelaz">
+      <input type="text" placeholder="Nama" required>
+      <textarea rows="5" placeholder="Pesan" required></textarea>
+      <button type="submit">Kirim</button>
+    </form>
+    <div class="info">
+      <p>Email: <a href="mailto:akrommuhammadyusuf@gmail.com">akrommuhammadyusuf@gmail.com</a></p>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 Akrom - Wibu
+  </footer>
+
+</body>
+</html>
