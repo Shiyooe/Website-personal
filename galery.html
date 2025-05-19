@@ -1,37 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>galery</title>
-    <style>
-    div {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-wrap: wrap;
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galery</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      background-color: #fdfdfd;
     }
-    div img {
-        width:150px;
-        height:150px;
-        border:2px solid #ff3d0036;
-        border-radius:13px;
-        box-shadow: 4px 7px 7px 0px black;
-        cursor:pointer;
-        margin :10px;
-        transition:400ms;
-    }
-    
-    div img:hover{
-        filter: grayscale(1);
-        transform: scale(1.03);
-        
-    }
+
     nav {
       background: #750404;
       padding: 10px;
       text-align: center;
-      right: 0;
     }
 
     nav a {
@@ -44,13 +27,44 @@
     nav a:hover {
       text-decoration: underline;
     }
+
+    .video-container {
+      display: flex;
+      justify-content: center;
+      margin: 20px 0;
+    }
+
+    .gallery {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      padding: 20px;
+    }
+
+    .gallery img {
+      width: 150px;
+      height: 150px;
+      border: 2px solid #ff3d0036;
+      border-radius: 13px;
+      box-shadow: 4px 7px 7px 0px black;
+      cursor: pointer;
+      margin: 10px;
+      transition: 400ms;
+    }
+
+    .gallery img:hover {
+      filter: grayscale(1);
+      transform: scale(1.03);
+    }
+
     footer {
       text-align: center;
       font-size: 13px;
       color: #666;
       margin: 40px 0 10px;
     }
-    </style>
+  </style>
 </head>
 <body>
   <nav>
@@ -61,23 +75,26 @@
     <a href="Contact.html">Contact</a>
   </nav>
 
-    <div class="vd">
-        <video src="Calisthenic.mp4" width="350" height="450" controls >my video </video>
-    </div>
+  <div class="video-container">
+    <video src="Calisthenic.mp4" width="350" height="450" controls>
+      Your browser does not support the video tag.
+    </video>
+  </div>
 
-    <div class="img">
-        <img src="my bike.jpg" alt="">
-        <img src="santai.jpg" alt="">
-        <img src="my waifu1.jpg" alt="">
-        <img src="Aizen.jpg" alt="">
-        <img src="leluch.jpg" alt="">
-        <img src="charlotte.jpg" alt="">
-        <img src="chisato.jpg" alt="">
-        <img src="Mao mao.jpg" alt="">
-        <img src="frieren.jpg" alt="">
-    </div>
-    <footer>
-        © 2025 Akrom - Wibu
-    </footer>
+  <div class="gallery">
+    <img src="my bike.jpg" alt="My Bike">
+    <img src="santai.jpg" alt="Santai">
+    <img src="my waifu1.jpg" alt="Waifu 1">
+    <img src="Aizen.jpg" alt="Aizen">
+    <img src="leluch.jpg" alt="Lelouch">
+    <img src="charlotte.jpg" alt="Charlotte">
+    <img src="chisato.jpg" alt="Chisato">
+    <img src="Mao mao.jpg" alt="Mao Mao">
+    <img src="frieren.jpg" alt="Frieren">
+  </div>
+
+  <footer>
+    © 2025 Akrom - Wibu
+  </footer>
 </body>
 </html>
