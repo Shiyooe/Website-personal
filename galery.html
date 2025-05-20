@@ -1,27 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Galery</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Galeri Akrom</title>
   <style>
     body {
       margin: 0;
-      font-family: sans-serif;
-      background-color: #fdfdfd;
+      font-family: Arial, sans-serif;
+      background: #fff;
+      color: #333;
     }
 
     nav {
-      background: #750404;
-      padding: 10px;
+      background: #b30000;
       text-align: center;
+      padding: 10px 0;
     }
 
     nav a {
-      color: #fff;
-      margin: 0 10px;
+      color: white;
       text-decoration: none;
-      font-weight: bold;
+      margin: 0 15px;
+      font-size: 16px;
     }
 
     nav a:hover {
@@ -31,54 +32,51 @@
     .video-container {
       display: flex;
       justify-content: center;
-      margin: 20px 0;
+      margin: 20px;
     }
 
     .gallery {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-wrap: wrap;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 15px;
       padding: 20px;
     }
 
     .gallery img {
-      width: 150px;
-      height: 150px;
-      border: 2px solid #ff3d0036;
-      border-radius: 13px;
-      box-shadow: 4px 7px 7px 0px black;
-      cursor: pointer;
-      margin: 10px;
-      transition: 400ms;
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      border: 2px solid #ffb3b3;
+      border-radius: 10px;
+      box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s;
     }
 
     .gallery img:hover {
-      filter: grayscale(1);
-      transform: scale(1.03);
+      transform: scale(1.05);
+      filter: grayscale(0.8);
     }
 
     footer {
       text-align: center;
-      font-size: 13px;
-      color: #666;
-      margin: 40px 0 10px;
+      font-size: 14px;
+      color: #555;
+      padding: 20px;
     }
   </style>
 </head>
 <body>
+
   <nav>
     <a href="index.html">Home</a>
     <a href="about.html">About</a>
-    <a href="buku tamu.html">Buku Tamu</a>
-    <a href="galery.html">Galery</a>
-    <a href="Contact.html">Contact</a>
+    <a href="buku tamu.html">B.T</a>
+    <a href="galery.html">Galeri</a>
+    <a href="Contact.html">Kontak</a>
   </nav>
 
   <div class="video-container">
-    <video src="Calisthenic.mp4" width="350" height="450" controls>
-      Your browser does not support the video tag.
-    </video>
+    <video src="Calisthenic.mp4" width="300" height="400" controls></video>
   </div>
 
   <div class="gallery">
@@ -94,7 +92,8 @@
   </div>
 
   <footer>
-    © 2025 Akrom - Wibu
+    © 2025 Akrom - Wibu Galeri
   </footer>
+
 </body>
 </html>
