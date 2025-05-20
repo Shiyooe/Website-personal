@@ -26,8 +26,6 @@
       padding: 20px;
       background: rgba(255, 105, 180, 0.05);
       animation: fadeInNav 1s ease forwards;
-      right: 20px;
-
     }
     @keyframes fadeInNav {
       from { opacity: 0; transform: translateY(-20px); }
@@ -79,10 +77,46 @@
       from { opacity: 0; transform: scale(0.8); }
       to { opacity: 1; transform: scale(1); }
     }
-    .name {
+    .kenalan {
       font-size: 28px;
-      color: #ff69b4;
-      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      color: #fff; 
+      margin-bottom: 15px;
+    }
+    .gw {
+      margin-right: 10px;
+    }
+    .teksnya {
+      overflow: hidden;
+      height: 34px; 
+      line-height: 34px;
+    }
+    .teksnya span {
+      display: block;
+      animation: slide-up 8s infinite; 
+    }
+    @keyframes slide-up {
+      0%, 15% {
+        transform: translateY(0);
+      }
+      20%, 35% {
+        transform: translateY(-34px); 
+      }
+      40%, 55% {
+        transform: translateY(-68px);
+      }
+      60%, 75% {
+        transform: translateY(-102px); 
+      }
+      80%, 95% {
+        transform: translateY(-136px); 
+      }
+      100% {
+        transform: translateY(-170px); 
+      }
     }
     .desc {
       max-width: 600px;
@@ -109,7 +143,6 @@
     .skill:nth-child(2) { animation-delay: 0.2s; }
     .skill:nth-child(3) { animation-delay: 0.4s; }
     .skill:nth-child(4) { animation-delay: 0.6s; }
-
     @keyframes fadeInSkill {
       to { opacity: 1; }
     }
@@ -198,11 +231,10 @@
   </style>
 </head>
 <body>
-
   <nav>
     <a href="index.html">Home</a>
     <a href="about.html">About</a>
-    <a href="buku tamu.html">Buku Tamu</a>
+    <a href="buku tamu.html">B.T</a>
     <a href="galery.html">Galeri</a>
     <a href="contact.html">Contact</a>
   </nav>
@@ -210,9 +242,22 @@
   <header>
     <div class="profile-akrom">
       <img src="istri saya.jpg" alt="Foto Akrom" class="profile-pic">
-      <div class="name">Muhammad Yusuf Akrom</div>
+      <div class="kenalan">
+        <div class="gw">I'M</div>
+        <div class="teksnya">
+          <span>
+            YUSUF AKROM<br>
+            PROGRAMMER<br>
+            WEB DEVELOPER<br>
+            AI ENGINEERING<br>
+            CYBER SECURITY<br>
+            YUSUF AKROM 
+          </span>
+        </div>
+      </div>
       <div class="desc">
-        Aku adalah pelajar dan calon AI Engineer. Dari kecil, aku ingin menjelajah luar angkasa. Hobiku: coding, menulis, bersepeda, dan belajar setiap hari.
+        Aku adalah pelajar dan calon AI Engineer. Dari kecil, aku ingin menjelajah luar angkasa. 
+        Hobiku: coding, menulis, bersepeda, dan belajar.
       </div>
     </div>
   </header>
@@ -248,6 +293,5 @@
   <footer>
     © 2025 Akrom - Wibu
   </footer>
-
 </body>
 </html>
