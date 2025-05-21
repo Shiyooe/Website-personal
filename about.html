@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>About Me</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tentang Akrom</title>
   <style>
     * {
       margin: 0;
@@ -12,115 +12,97 @@
     }
 
     body {
-      background: url('Background.webp') no-repeat center center fixed;
-      background-size: cover;
       font-family: sans-serif;
-      color: #ffffff;
-      animation: fadeInBody 1.5s ease;
+      color: #fff;
     }
 
-    @keyframes fadeInBody {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
     nav {
+      background: #111;
+      padding: 20px;
+      display: flex;
+      justify-content: right;
+      gap: 30px;
+      font-weight: bold;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    section {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 50px 10%;
+      border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    section:nth-child(even) {
+      flex-direction: row-reverse;
+    }
+
+    .text {
+      flex: 1;
+      padding: 20px;
+      background: rgba(0, 0, 0, 0.5);
+      border-radius: 10px;
+    }
+
+    .text h2 {
+      margin-bottom: 10px;
+      color: #00ffff;
+    }
+
+    .text p {
+      line-height: 1.6;
+    }
+
+    .image {
+      flex: 1;
       display: flex;
       justify-content: center;
-      gap: 20px;
-      padding: 20px;
-      background: rgba(255, 105, 180, 0.05);
-      animation: fadeInNav 1s ease forwards;
-      right: 20px;
-
-    }
-    @keyframes fadeInNav {
-      from { opacity: 0; transform: translateY(-20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    nav a {
-      color: #000000;
-      text-decoration: none;
-      font-weight: bold;
-      transition: 0.3s ease;
-    }
-    nav a:hover {
-      color: #fff;
-      text-shadow: 0 0 10px #ff69b4;
-      transform: scale(1.05);
-    }
-    .gambar {
-      margin-top: 120px;
-      display: flex;
-      flex-direction: column;
       align-items: center;
-      padding: 0 20px;
-      animation: fadeInMain 1.5s ease;
     }
 
-    @keyframes fadeInMain {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    .pic {
-      width: 150px;
-      height: 150px;
-      border-radius: 50%;
-      border: 4px solid #05a8f3c2;
+    .image img {
+      width: 250px;
+      height: 250px;
       object-fit: cover;
-      box-shadow: 0 0 15px #00f50070;
-      margin-bottom: 25px;
-    }
-
-    .deskripsi {
-      background: rgba(0, 0, 0, 0.6);
-      padding: 25px;
       border-radius: 20px;
-      max-width: 800px;
-      line-height: 1.6;
-      font-size: 16px;
-      text-align: justify;
-      box-shadow: 0 0 20px rgba(4, 188, 235, 0.3);
-      animation: fadeInDesc 2s ease;
-    }
-
-    @keyframes fadeInDesc {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
-
-    .deskripsi h2 {
-      text-align: center;
-      color: #00eaff;
-      margin-bottom: 20px;
-    }
-
-    .deskripsi p {
-      margin-bottom: 20px;
-    }
-
-    .deskripsi ol {
-      margin-left: 20px;
-      margin-top: 10px;
+      border: 3px solid #fff;
+      box-shadow: 0 0 10px #00eaff;
     }
 
     footer {
       text-align: center;
-      padding: 20px;
-      color: #ffffffaa;
-      font-size: 13px;
-      background: rgba(0, 0, 0, 0.3);
-      margin-top: 60px;
+      padding: 30px;
+      background: #000;
+      color: white;
+    }
+
+    .about {
+      background-image: url("walpaper1.png"); 
+    }
+
+    .hobi {
+      background-image: url("walpaper2.png");
+    }
+
+    .tujuan {
+      background-image: url("walpaper3.jpg");
     }
 
     @media (max-width: 768px) {
-      nav a {
-        margin: 0 10px;
-        font-size: 14px;
+      section {
+        flex-direction: column;
       }
-
-      .deskripsi {
-        font-size: 15px;
+      .image img {
+        width: 200px;
+        height: 200px;
       }
     }
   </style>
@@ -128,47 +110,52 @@
 <body>
 
   <nav>
-    <a href="index.html" title="Home">Home</a>
-    <a href="about.html" title="About">About</a>
-    <a href="buku tamu.html" title="Buku Tamu">B.T</a>
-    <a href="galery.html" title="Galery">Galery</a>
-    <a href="Contact.html" title="Contact">Contact</a>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="buku tamu.html">B.T</a>
+    <a href="galery.html">Galery</a>
+    <a href="Contact.html">Contact</a>
   </nav>
 
-  <div class="gambar">
-    <img src="Akrom.jpg" alt="Foto Akrom" class="pic">
-
-    <div class="deskripsi">
-      <h2>Muhammad Yusuf Akrom!</h2>
-      <p>
-        Haloo! Nama saya adalah <b>Muhammad Yusuf Akrom</b>, bisa panggil aku <i>Akrom</i>. Aku pelajar 16 tahun yang tertarik dengan dunia teknologi, pemrograman, anime, dan luar angkasa. Aku lahir di Bandung, 12 Agustus 2008.
-      </p>
-      <p>
-        Hobi: Coding, bersepeda, nonton anime dan film, melukis, menulis (novel, cerpen, keseharian), belajar bahasa asing, membaca, olahraga, hiking, dll. Aku suka bersepeda jauh untuk melatih mental dan skill survival. Coding favoritku Python dan C++.
-      </p>
-      <p>
-        Aku suka anime seperti <i>Absolute Duo</i>, <i>Bleach</i>, <i>Frieren</i>, <i>Solo Leveling</i>, <i>Danmachi</i>, dll. Karakter favorit: <b>Shiroko, Aizen, Frieren, Ryo, Maomao, Chisato</b>.
-      </p>
-      <p>
-        Aku sedang fokus ke bidang AI dan Robotic. Target karierku adalah jadi AI Engineer (spesialis aerospace). Sekarang aku belajar Bahasa Inggris dan Jerman buat kuliah di luar negeri, karena aku ingin berkembang di sistem pendidikan yang lebih baik.
-      </p>
-      <p>
-        Aku belajar secara otodidak lewat AI, YouTube, dan ebook. Mulai dari pemrograman, manajemen keuangan, bahasa asing, fisika, strategi, bisnis digital, sampai skill sehari-hari kayak memperbaiki kabel.
-      </p>
-      <p>
-        <b>Skill yang sedang aku latih:</b>
-        <ol>
-          <li>Skill Pribadi & Mental</li>
-          <li>Skill Komunikasi</li>
-          <li>Skill Profesional & Digital</li>
-          <li>Skill Survival & Life skill</li>
-        </ol>
+  <section class="about">
+    <div class="text">
+      <h2>About Me</h2>
+      <p>Halo!,Perkenalkan nama saya Muhammad Yusuf Akrom,saya lahir di Bandung pada tanggal 12-08-2008.Saya adalah seorang pelajar yang berada di Sekolah SMK Al-Falah jurusan RPL.
+        saya juga antusias menyukai bidang teknologi,alam,dll.terutama di bidang Robotic,Ai,ML,Antariksa,dan waktu.
       </p>
     </div>
-  </div>
+    <div class="image">
+      <img src="Akrom.jpg" alt="Foto About">
+    </div>
+  </section>
+
+  <section class="hobi">
+    <div class="image">
+      <img src="pp aku" alt="Foto Hobi">
+    </div>
+    <div class="text">
+      <h2>Hobi Aku</h2>
+      <p>Hobi ku ada bnyk yg paling sering ku lakukan yaitu Main game,Coding,Bersepeda,Nonton anime/Donghua,Menulis,main catur,gambar,solo Treveling,dll.
+         Aku juga suka melakukan hobi yg bisa membuat ku berkembang.contohnya di Mental dan skill bertahan hidup,aku suka bersepeda 100km+/minggu dan itu dilakukan sendirian tanpa club atau teman.
+        kalo skill Teknologi contohnya aku sering Ngoding di rumah misal bikin website(html),kalo di python aku suka bikin astroPy contohnya menghitung jarak suatu bintang di konversi ke koordinat.</p>
+    </div>
+  </section>
+
+  <section class="tujuan">
+    <div class="text">
+      <h2>Tujuan Hidup</h2>
+      <p>Menjadi AI Engineer spesialis aerospace, saya juga ada rencana kuliah di luar negri di bidang robotic atau gak aerospace Engineering atau AI.
+        aku juga ingin membuat teknologi yg bisa merubah masa depan atau yg berbeda,dan saya juga ingin membuat tools Ai yg bisa bantu para 
+        astronom untuk bisa mempermudah menganalisis angkasa.dst
+      </p>
+    </div>
+    <div class="image">
+      <img src="ai.jpg" alt="Foto Tujuan">
+    </div>
+  </section>
 
   <footer>
-    © 2025 Akrom - Wibu
+    &copy; 2025 Akrom - i like music
   </footer>
 
 </body>
