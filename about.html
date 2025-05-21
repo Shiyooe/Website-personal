@@ -1,105 +1,113 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Buku Tamu</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tentang Akrom</title>
   <style>
-    #bgVideo {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      z-index: -1;
-      opacity: 0.9;
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
 
     body {
-      margin: 0;
       font-family: sans-serif;
-      background: rgba(0, 0, 0, 0.6);
       color: #fff;
     }
 
     nav {
-      background: rgba(0, 0, 255, 0.8);
-      padding: 10px;
-      text-align: right;
+      background: #111;
+      padding: 20px;
+      display: flex;
+      justify-content: right;
+      gap: 30px;
+      font-weight: bold;
     }
 
     nav a {
       color: #fff;
-      margin: 0 10px;
       text-decoration: none;
-      font-weight: bold;
     }
 
-    nav a:hover {
-      text-decoration: underline;
+    section {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 50px 10%;
+      border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
     }
 
-    .container {
-      max-width: 500px;
-      margin: 50px auto;
-      padding: 25px;
-      background: rgba(0, 0, 0, 0.6);
-      border-radius: 8px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-      color: white;
+    section:nth-child(even) {
+      flex-direction: row-reverse;
     }
 
-    h2 {
-      text-align: center;
-      color: #07f7ff;
+    .text {
+      flex: 1;
+      padding: 20px;
+      background: rgba(0, 0, 0, 0.5);
+      border-radius: 10px;
     }
 
-    label {
-      display: block;
-      margin-top: 15px;
+    .text h2 {
+      margin-bottom: 10px;
+      color: #00ffff;
     }
 
-    input, select, textarea {
-      width: 100%;
-      padding: 10px;
-      margin-top: 5px;
-      border: none;
-      border-radius: 4px;
-      background: #f9f9f9;
-      color: #333;
+    .text p {
+      line-height: 1.6;
     }
 
-    button {
-      width: 100%;
-      padding: 12px;
-      margin-top: 20px;
-      background: #4f4fff;
-      color: white;
-      border: none;
-      border-radius: 4px;
-      font-weight: bold;
-      cursor: pointer;
-      transition: 0.3s;
+    .image {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
 
-    button:hover {
-      background: #3c3ccf;
+    .image img {
+      width: 250px;
+      height: 250px;
+      object-fit: cover;
+      border-radius: 20px;
+      border: 3px solid #fff;
+      box-shadow: 0 0 10px #00eaff;
     }
 
     footer {
       text-align: center;
-      font-size: 13px;
-      color: #ddd;
-      margin: 40px 0 10px;
+      padding: 30px;
+      background: #000;
+      color: white;
+    }
+
+    .about {
+      background-image: url("walpaper1.png"); 
+    }
+
+    .hobi {
+      background-image: url("walpaper2.png");
+    }
+
+    .tujuan {
+      background-image: url("walpaper3.jpg");
+    }
+
+    @media (max-width: 768px) {
+      section {
+        flex-direction: column;
+      }
+      .image img {
+        width: 200px;
+        height: 200px;
+      }
     }
   </style>
 </head>
 <body>
-
-  <video autoplay muted loop playsinline id="bgVideo">
-    <source src="blue archive.mp4" type="video/mp4">
-  </video>
 
   <nav>
     <a href="index.html">Home</a>
@@ -109,54 +117,45 @@
     <a href="Contact.html">Contact</a>
   </nav>
 
-  <div class="container">
-    <h2>Buku Tamu</h2>
-    <form>
-      <label for="nama">Nama:</label>
-      <input type="text" id="nama" name="nama" placeholder="Nama kau disini" required>
+  <section class="about">
+    <div class="text">
+      <h2>About Me</h2>
+      <p>Halo!,Perkenalkan nama saya Muhammad Yusuf Akrom,saya lahir di Bandung pada tanggal 12-08-2008.Saya adalah seorang pelajar yang berada di Sekolah SMK Al-Falah jurusan RPL.
+        saya juga antusias menyukai bidang teknologi,alam,dll.terutama di bidang Robotic,Ai,ML,Antariksa,dan waktu.
+      </p>
+    </div>
+    <div class="image">
+      <img src="Akrom.jpg" alt="Foto About">
+    </div>
+  </section>
 
-      <label for="umur">Umur:</label>
-      <input type="number" id="umur" name="umur" placeholder="Masukkan umurmu" required>
+  <section class="hobi">
+    <div class="image">
+      <img src="pp aku" alt="Foto Hobi">
+    </div>
+    <div class="text">
+      <h2>Hobi Aku</h2>
+      <p>Hobi ku ada bnyk yg paling sering ku lakukan yaitu Main game,Coding,Bersepeda,Nonton anime/Donghua,Menulis,main catur,gambar,solo Treveling,dll.
+         Aku juga suka melakukan hobi yg bisa membuat ku berkembang.contohnya di Mental dan skill bertahan hidup,aku suka bersepeda 100km+/minggu dan itu dilakukan sendirian tanpa club atau teman.
+        kalo skill Teknologi contohnya aku sering Ngoding di rumah misal bikin website(html),kalo di python aku suka bikin astroPy contohnya menghitung jarak suatu bintang di konversi ke koordinat.</p>
+    </div>
+  </section>
 
-      <label for="gender">Jenis Kelamin:</label>
-      <select id="gender" name="gender" required>
-        <option value="">Pilih</option>
-        <option value="Laki-laki">Laki-laki</option>
-        <option value="Perempuan">Perempuan</option>
-        <option value="Lainnya">Lainnya</option>
-      </select>
-
-      <label for="status">Status:</label>
-      <select id="status" name="status" required>
-        <option value="">Pilih</option>
-        <option value="Pelajar">Pelajar</option>
-        <option value="Mahasiswa">Mahasiswa</option>
-        <option value="Pembisnis">Pembisnis</option>
-        <option value="Pekerja">Pekerja</option>
-        <option value="Investor">Investor</option>
-        <option value="Programmer">Programmer</option>
-        <option value="Developer">Developer</option>
-        <option value="Guru/Dosen">Guru/Dosen</option>
-        <option value="Engineering">Engineering</option>
-        <option value="Buruh">Buruh</option>
-        <option value="Lainnya">Lainnya</option>
-      </select>
-
-      <label for="hobi">Hobi:</label>
-      <input type="text" id="hobi" name="hobi" placeholder="Misal: menulis, ngoding, menggambar..." required>
-
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" placeholder="isigmailmu@gmail.com" required>
-
-      <label for="pesan">Pesan:</label>
-      <textarea id="pesan" name="pesan" rows="4" placeholder="Silahkan komen walaupun gw gk pake JS :)" required></textarea>
-
-      <button type="submit">Kirim</button>
-    </form>
-  </div>
+  <section class="tujuan">
+    <div class="text">
+      <h2>Tujuan Hidup</h2>
+      <p>Menjadi AI Engineer spesialis aerospace, saya juga ada rencana kuliah di luar negri di bidang robotic atau gak aerospace Engineering atau AI.
+        aku juga ingin membuat teknologi yg bisa merubah masa depan atau yg berbeda,dan saya juga ingin membuat tools Ai yg bisa bantu para 
+        astronom untuk bisa mempermudah menganalisis angkasa.dst
+      </p>
+    </div>
+    <div class="image">
+      <img src="ai.jpg" alt="Foto Tujuan">
+    </div>
+  </section>
 
   <footer>
-    © 2025 Akrom - Wibu
+    &copy; 2025 Akrom - i like music
   </footer>
 
 </body>
