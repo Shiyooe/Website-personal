@@ -5,18 +5,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Buku Tamu</title>
   <style>
+    #bgVideo {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+      opacity: 0.9;
+    }
+
     body {
       margin: 0;
       font-family: sans-serif;
-      background: #f2f2f2;
-      color: #333;
+      background: rgba(0, 0, 0, 0.6);
+      color: #fff;
     }
 
     nav {
-      background: #4f4fff;
+      background: rgba(0, 0, 255, 0.8);
       padding: 10px;
-      text-align: center;
-      right: 0;
+      text-align: right;
     }
 
     nav a {
@@ -32,16 +42,17 @@
 
     .container {
       max-width: 500px;
-      margin: 30px auto;
-      padding: 20px;
-      background: #fff;
-      border-radius: 6px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      margin: 50px auto;
+      padding: 25px;
+      background: rgba(0, 0, 0, 0.6);
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      color: white;
     }
 
     h2 {
       text-align: center;
-      color: #4f4fff;
+      color: #07f7ff;
     }
 
     label {
@@ -49,17 +60,19 @@
       margin-top: 15px;
     }
 
-    input, textarea {
+    input, select, textarea {
       width: 100%;
-      padding: 8px;
+      padding: 10px;
       margin-top: 5px;
-      border: 1px solid #ccc;
+      border: none;
       border-radius: 4px;
+      background: #f9f9f9;
+      color: #333;
     }
 
     button {
       width: 100%;
-      padding: 10px;
+      padding: 12px;
       margin-top: 20px;
       background: #4f4fff;
       color: white;
@@ -67,17 +80,26 @@
       border-radius: 4px;
       font-weight: bold;
       cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background: #3c3ccf;
     }
 
     footer {
       text-align: center;
       font-size: 13px;
-      color: #666;
+      color: #ddd;
       margin: 40px 0 10px;
     }
   </style>
 </head>
 <body>
+
+  <video autoplay muted loop playsinline id="bgVideo">
+    <source src="blue archive.mp4" type="video/mp4">
+  </video>
 
   <nav>
     <a href="index.html">Home</a>
@@ -93,18 +115,48 @@
       <label for="nama">Nama:</label>
       <input type="text" id="nama" name="nama" placeholder="Nama kau disini" required>
 
+      <label for="umur">Umur:</label>
+      <input type="number" id="umur" name="umur" placeholder="Masukkan umurmu" required>
+
+      <label for="gender">Jenis Kelamin:</label>
+      <select id="gender" name="gender" required>
+        <option value="">Pilih</option>
+        <option value="Laki-laki">Laki-laki</option>
+        <option value="Perempuan">Perempuan</option>
+        <option value="Lainnya">Lainnya</option>
+      </select>
+
+      <label for="status">Status:</label>
+      <select id="status" name="status" required>
+        <option value="">Pilih</option>
+        <option value="Pelajar">Pelajar</option>
+        <option value="Mahasiswa">Mahasiswa</option>
+        <option value="Pembisnis">Pembisnis</option>
+        <option value="Pekerja">Pekerja</option>
+        <option value="Investor">Investor</option>
+        <option value="Programmer">Programmer</option>
+        <option value="Developer">Developer</option>
+        <option value="Guru/Dosen">Guru/Dosen</option>
+        <option value="Engineering">Engineering</option>
+        <option value="Buruh">Buruh</option>
+        <option value="Lainnya">Lainnya</option>
+      </select>
+
+      <label for="hobi">Hobi:</label>
+      <input type="text" id="hobi" name="hobi" placeholder="Misal: menulis, ngoding, menggambar..." required>
+
       <label for="email">Email:</label>
-      <input type="email" id="email" name="email" placeholder="isigmainlu@gmail.com" required>
+      <input type="email" id="email" name="email" placeholder="isigmailmu@gmail.com" required>
 
       <label for="pesan">Pesan:</label>
-      <textarea id="pesan" name="pesan" rows="4" placeholder="Silahkan komen walaupun gw gk pake js :)" required></textarea>
+      <textarea id="pesan" name="pesan" rows="4" placeholder="Silahkan komen walaupun gw gk pake JS :)" required></textarea>
 
       <button type="submit">Kirim</button>
     </form>
   </div>
 
   <footer>
-    © 2025 Akrom - wibu
+    © 2025 Akrom - Wibu
   </footer>
 
 </body>
